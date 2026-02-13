@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Remise en forme rapide + force explosive. Coaching street workout bodyweight avec Moses Thundercat. Réserve ta consultation GRATUITE maintenant.">
+    <meta name="theme-color" content="#FF6B35">
+    <title>Moses Thundercat - Street Workout Mastery | Consultation Exclusive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Moses Thundercat — Remise en forme & force explosive">
+    <meta property="og:description" content="Coaching street workout bodyweight. Réserve ta consultation gratuite et récupère ton plan personnalisé.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"Moses Thundercat","jobTitle":"Street Workout Coach","description":"Coaching street workout, réathlétisation et force bodyweight.","url":"https://calendly.com/mosiahahouansou/30min"}
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            line-height: 1.6; 
+            color: #1A1A1A; 
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        .skip-link{position:absolute;left:0;top:-40px;background:#FF6B35;color:#fff;padding:8px 16px;border-radius:4px;z-index:1000;transition:top 0.2s}
+        .skip-link:focus{top:10px}
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .questionnaire {
+            background: linear-gradient(135deg, #FF6B35, #FF8C42);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+        }
+        .questionnaire h2 { 
+            font-size: clamp(1.8rem, 4vw, 2.5rem); 
+            font-weight: 900; 
+            margin-bottom: 1rem; 
+        }
+        .questionnaire p { 
+            font-size: 1.2rem; 
+            margin-bottom: 2rem; 
+            opacity: 0.95; 
+        }
+        .google-form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            background: rgba(255,255,255,0.95);
+        }
+        .google-form-iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            display: block;
+        }
+        .hero { 
+            height: 70vh; min-height: 500px; 
+            background: linear-gradient(135deg, rgba(26,26,26,0.9), rgba(0,0,0,0.7)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%231A1A1A" width="1200" height="800"/><circle fill="%23FF6B35" opacity="0.3" cx="300" cy="200" r="150"/><circle fill="%23FF8C42" opacity="0.2" cx="900" cy="600" r="200"/></svg>');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+        }
+        .hero-content h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin-bottom: 1rem; }
+        .hero-content p { font-size: clamp(1.1rem, 2.5vw, 1.6rem); font-weight: 300; margin-bottom: 2rem; }
+        .cta-btn { 
+            background: linear-gradient(45deg, #FF6B35, #FF8C42); 
+            color: white; padding: 18px 40px; font-size: 1.2rem; font-weight: 700;
+            text-decoration: none; border-radius: 50px; display: inline-block;
+            box-shadow: 0 10px 30px rgba(255,107,53,0.4);
+            transition: all 0.3s; position: relative; overflow: hidden;
+        }
+        .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(255,107,53,0.6); }
+        .cta-btn::before { 
+            content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; 
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); 
+            transition: 0.5s; 
+        }
+        .cta-btn:hover::before { left: 100%; }
+        .section { padding: 80px 0; }
+        .section:nth-child(even) { background: #F8F9FA; }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; text-align: center; margin-bottom: 2rem; color: #FF6B35; }
+        h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
+        .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; text-align: center; }
+        .problem-item { opacity: 0; animation: fadeInUp 0.8s forwards; }
+        .problem-item:nth-child(1) { animation-delay: 0.2s; }
+        .problem-item:nth-child(2) { animation-delay: 0.4s; }
+        .problem-item:nth-child(3) { animation-delay: 0.6s; }
+        .authority-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center; margin: 3rem 0; }
+        .stat { font-size: 3rem; font-weight: 900; color: #FF6B35; }
+        .stat-label { font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .testimonial { background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); opacity: 0; animation: fadeInUp 0.8s forwards; }
+        .stars { color: #FF6B35; font-size: 1.5rem; margin-bottom: 1rem; }
+        .offer-card { background: linear-gradient(135deg, #FF6B35, #FF8C42); color: white; padding: 3rem; border-radius: 30px; text-align: center; max-width: 600px; margin: 0 auto; box-shadow: 0 20px 60px rgba(255,107,53,0.4); }
+        .offer-price { font-size: 4rem; font-weight: 900; margin: 1rem 0; }
+        .offer-value { font-size: 1.5rem; opacity: 0.9; text-decoration: line-through; }
+        .urgency { background: #FFEB3B; color: #1A1A1A; padding: 1rem 2rem; border-radius: 50px; font-weight: 700; font-size: 1.2rem; margin: 2rem 0; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @media (max-width: 768px) { .questionnaire { padding: 30px 0; } .google-form-iframe { height: 500px; } .hero { height: 80vh; } .section { padding: 60px 0; } }
+    </style>
+</head>
+<body>
+    <a href="#main" class="skip-link">Aller au contenu</a>
+
+    <main id="main">
+    <!-- QUESTIONNAIRE GOOGLE FORM -->
+    <section class="questionnaire" aria-labelledby="q-title">
+        <div class="container">
+            <h2 id="q-title">🔍 Évalue ton Niveau en 2min</h2>
+            <p>Remplis ce questionnaire rapide → Je prépare ton plan personnalisé avant notre appel</p>
+            <div class="google-form-container" aria-hidden="false">
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLScXViLuyhrHyF50-1W_3VEQCfcExyTZhXcu9e2-j3IROx71sw/viewform?embedded=true" 
+                    class="google-form-iframe"
+                    title="Questionnaire Moses Thundercat"
+                    loading="lazy">
+                </iframe>
+            </div>
+            <noscript>
+                <p style="margin-top:20px;color:#fff">JavaScript désactivé — ouvrir le formulaire directement : <a href="https://docs.google.com/forms/d/e/1FAIpQLScXViLuyhrHyF50-1W_3VEQCfcExyTZhXcu9e2-j3IROx71sw/viewform" style="color:#fff;text-decoration:underline">Formulaire</a></p>
+            </noscript>
+            <p style="margin-top: 20px; font-size: 1.1rem; opacity: 0.9;">📱 Fais ça sur ton téléphone → Réserve après ↓</p>
+        </div>
+    </section>
+
+    <!-- HERO -->
+    <section class="hero" role="region" aria-label="Introduction">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Moses Thundercat</h1>
+                <p>Remise en forme rapide<br><strong>+ Force explosive bodyweight</strong></p>
+                <a href="https://calendly.com/mosiahahouansou/30min" target="_blank" rel="noopener noreferrer" class="cta-btn">🎯 Réserve ta Consultation GRATUITE (15min)</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLÈME -->
+    <section class="section" id="probleme" aria-labelledby="probleme-title">
+        <div class="container">
+            <h2 id="probleme-title">Tu as perdu ta forme ?</h2>
+            <div class="problem-grid">
+                <div class="problem-item">
+                    <h3>⚡ Faiblesse musculaire</h3>
+                    <p>Tu sens que ton corps ne suit plus comme avant</p>
+                </div>
+                <div class="problem-item">
+                    <h3>📉 Perte de force</h3>
+                    <p>Les tractions, dips qui repartent à zéro après pause</p>
+                </div>
+                <div class="problem-item">
+                    <h3>💪 Réathlétisation lente</h3>
+                    <p>Reprendre sans se blesser, étape par étape</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTHORITY -->
+    <section class="section" role="region" aria-label="Pourquoi Moses Thundercat">
+        <div class="container">
+            <h2>Pourquoi Moses Thundercat ?</h2>
+            <div class="authority-stats">
+                <div>
+                    <div class="stat">10+</div>
+                    <div class="stat-label">Années expérience</div>
+                </div>
+                <div>
+                    <div class="stat">100+</div>
+                    <div class="stat-label">Clients transformés</div>
+                </div>
+                <div>
+                    <div class="stat">5★</div>
+                    <div class="stat-label">Ratings</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <p><strong>Street Workout certifié • Réathlétisation • Force fonctionnelle</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section class="section">
+        <div class="container">
+            <h2>Résultats Réels</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="stars" aria-hidden="true">★★★★★</div>
+                    <p>"Remis en forme après 6 mois d'arrêt. +8 tractions en 6 semaines."</p>
+                    <strong>- Karim, 28 ans</strong>
+                </div>
+                <div class="testimonial">
+                    <div class="stars" aria-hidden="true">★★★★★</div>
+                    <p>"Réathlétisation parfaite après blessure. Force revenue !"</p>
+                    <strong>- Aïcha, 32 ans</strong>
+                </div>
+                <div class="testimonial">
+                    <div class="stars" aria-hidden="true">★★★★★</div>
+                    <p>"De 0 à 10 tractions propres. Programme progressif."</p>
+                    <strong>- Lucas, 25 ans</strong>
+                </div>
+                <div class="testimonial">
+                    <div class="stars" aria-hidden="true">★★★★★</div>
+                    <p>"Force explosive retrouvée. Merci Moses !"</p>
+                    <strong>- Sarah, 29 ans</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFFRE -->
+    <section class="section" id="consultation">
+        <div class="container">
+            <div class="offer-card">
+                <h2>🎁 Offre Exclusive</h2>
+                <h3>Consultation Réathlétisation 1:1 (30min)</h3>
+                <div class="offer-price">97 CHF</div>
+                <div class="offer-value">Valeur réelle : 297 CHF</div>
+                <ul style="list-style: none; padding: 0; font-size: 1.2rem; margin: 2rem 0;">
+                    <li>✅ Diagnostic remise en forme (questionnaire rempli)</li>
+                    <li>✅ Plan réathlétisation 30 jours personnalisé</li>
+                    <li>✅ Protocol force bodyweight</li>
+                    <li>✅ Suivi personnalisé + ajustements</li>
+                </ul>
+                <div class="urgency">🚨 Seulement 5 SPOTS par semaine !</div>
+                <a href="https://calendly.com/mosiahahouansou/30min" target="_blank" rel="noopener noreferrer" class="cta-btn" style="font-size: 1.3rem; padding: 20px 50px;">🔥 Réserve Ton Spot MAINTENANT</a>
+                <p style="margin-top: 2rem; opacity: 0.9; font-size: 1.1rem;">💎 <strong>GARANTIE :</strong> Résultats ou 100% remboursé + 30 jours suivi gratuit</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- URGENCE FINALE -->
+    <section class="section" style="background: linear-gradient(135deg, #FF6B35, #FF8C42); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 1rem;">⏰ SPOTS LIMITÉS</h2>
+            <p style="font-size: 1.3rem; margin: 2rem 0;">Questionnaire rempli → Plan prêt pour notre appel !</p>
+            <a href="https://calendly.com/mosiahahouansou/30min" target="_blank" rel="noopener noreferrer" class="cta-btn" style="background: white; color: #FF6B35; font-weight: 900;">✅ OUI, JE VEUX MA FORCE MAINTENANT</a>
+            <p style="opacity: 0.9; margin-top: 2rem;">🔒 Paiement sécurisé Stripe • Annulation anytime</p>
+        </div>
+    </section>
+    </main>
+
+    <script>
+        // Smooth scroll for internal anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = this.getAttribute('href');
+                if (target && target.startsWith('#')){
+                    e.preventDefault();
+                    document.querySelector(target).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
