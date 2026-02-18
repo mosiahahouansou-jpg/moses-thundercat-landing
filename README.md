@@ -1,5 +1,3 @@
-# moses-thundercat-landing
-Landing page for my coaching
 <!DOCTYPE html>
 <html lang="fr">
 <head>
