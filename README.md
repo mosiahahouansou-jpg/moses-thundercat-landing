@@ -44,15 +44,15 @@
         .step-section { padding: 80px 20px; text-align: center; }
         .container { max-width: 1100px; margin: 0 auto; }
         
-        /* SECTION PROBLÈME OPTIMISÉE */
+        /* SECTION PROBLÈME */
         .problem-section { background: #fff; }
         .problem-intro { font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto 40px; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
         .card { background: var(--light); padding: 40px; border-radius: 20px; text-align: left; transition: 0.3s; border-bottom: 4px solid transparent; }
         .card:hover { border-bottom: 4px solid var(--primary); transform: translateY(-5px); }
         .card h3 { font-size: 1.5rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-        .card p { color: #444; font-size: 1rem; }
 
+        /* FORMULAIRE */
         .form-wrapper { background: white; padding: 20px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); margin-top: 40px; }
 
         /* OFFER BOX */
@@ -82,27 +82,47 @@
         <div class="hero-content">
             <h1>REPRENDS LE CONTRÔLE</h1>
             <p>De la réathlétisation à la force explosive. Un accompagnement d'élite pour transformer ton corps durablement.</p>
-            <a href="#eval" class="cta-btn">Évaluer mon potentiel →</a>
+            <a href="#pourquoi" class="cta-btn">Découvrir la méthode →</a>
         </div>
     </section>
 
     <section class="step-section problem-section">
         <div class="container">
-            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Le constat est frustrant, n'est-ce pas ?</h2>
+            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Tu as perdu ta forme ?</h2>
             <p class="problem-intro">Arrêter l'entraînement est facile, mais reprendre sans guide est un champ de mines.</p>
             
             <div class="grid">
                 <div class="card">
-                    <h3>⚡ Le sentiment d'impuissance</h3>
-                    <p>Tu sens que ton corps est "rouillé". L'énergie n'est plus la même, ton tonus musculaire s'est évaporé et chaque séance devient un combat contre la fatigue plutôt qu'une progression.</p>
+                    <h3>⚡ Faiblesse musculaire</h3>
+                    <p>Tu sens que ton corps ne suit plus comme avant. L'énergie n'est plus la même et chaque séance devient un combat contre la fatigue plutôt qu'une progression.</p>
                 </div>
                 <div class="card">
-                    <h3>📉 Le syndrome de la régression</h3>
-                    <p>Tes records en tractions et dips ne sont plus que des souvenirs. Repartir de zéro après une pause est un défi mental immense quand on sait ce qu'on a déjà accompli par le passé.</p>
+                    <h3>📉 Perte de force</h3>
+                    <p>Tes records en tractions et dips ne sont plus que des souvenirs. Repartir de zéro après une pause est un défi mental immense.</p>
                 </div>
                 <div class="card">
-                    <h3>💪 La peur du "faux mouvement"</h3>
-                    <p>Tu veux reprendre sérieusement, mais la peur de la blessure te freine. Sans un protocole de réathlétisation strict, tu risques de casser la machine avant même d'avoir retrouvé ton niveau.</p>
+                    <h3>💪 Réathlétisation lente</h3>
+                    <p>Tu veux reprendre sans te blesser, étape par étape. Sans un protocole strict, tu risques de casser la machine avant d'avoir retrouvé ton niveau.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="step-section" id="pourquoi" style="background: var(--dark); color: white;">
+        <div class="container">
+            <h2 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 30px;">Pourquoi Moses Thundercat ?</h2>
+            <div class="grid">
+                <div class="card" style="background: rgba(255,255,255,0.05); color: white;">
+                    <h3 style="color: var(--primary);">10+ Ans d'Expérience</h3>
+                    <p>Une expertise forgée sur le terrain, du débutant au performeur de haut niveau.</p>
+                </div>
+                <div class="card" style="background: rgba(255,255,255,0.05); color: white;">
+                    <h3 style="color: var(--primary);">Méthode Scientifique</h3>
+                    <p>Pas de hasard. On utilise la science de l'hypertrophie et de la force fonctionnelle.</p>
+                </div>
+                <div class="card" style="background: rgba(255,255,255,0.05); color: white;">
+                    <h3 style="color: var(--primary);">Zéro Blessure</h3>
+                    <p>Ma priorité est ta longévité. On renforce tes tendons et articulations en priorité.</p>
                 </div>
             </div>
         </div>
