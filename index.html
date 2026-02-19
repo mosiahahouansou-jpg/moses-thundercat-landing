@@ -75,16 +75,172 @@
     </div>
 </section>
 
-<section class="cta-section">
-    <h2 style="color: var(--primary);">OFFRE EXCLUSIVE MASTERY</h2>
-    <p style="font-size: 1.5rem; margin: 20px 0;">97 CHF <span style="text-decoration: line-through; opacity: 0.5; font-size: 1rem;">(Valeur 497 CHF)</span></p>
-    <ul style="list-style: none; margin-bottom: 30px; opacity: 0.9;">
-        <li>✅ Accompagnement personnalisé</li>
-        <li>✅ Analyse vidéo hebdomadaire</li>
-        <li>✅ Support WhatsApp 7j/7</li>
-    </ul>
-    <a href="https://calendly.com/mosiahahouansou/30min" class="cta-btn">RÉSERVER MON SUIVI MAINTENANT</a>
+<section class="step-section" id="consultation">
+    <div class="container">
+        <div class="premium-offer-card">
+            <div class="offer-badge">ÉDITION LIMITÉE</div>
+            <h2 class="black-title" style="font-size: 2.5rem; margin-top: 10px;">Accompagnement Mastery</h2>
+            <p class="offer-subtitle">2 mois de suivi intensif pour une transformation athlétique</p>
+
+            <div class="pricing-container">
+                <span class="old-price">497 CHF</span>
+                <div class="current-price">97 <span class="currency">CHF</span></div>
+                <p class="price-note">Investissement unique pour 60 jours de coaching</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🚀</div>
+                    <div class="feature-text">
+                        <strong>Plan Réathlétisation 60j</strong>
+                        <p>Ta route précise vers ton ancien niveau... et bien au-delà.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔍</div>
+                    <div class="feature-text">
+                        <strong>Analyse Vidéo Hebdomadaire</strong>
+                        <p>Correction millimétrée de ta forme pour bannir les blessures.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <div class="feature-text">
+                        <strong>Accès Direct WhatsApp 7j/7</strong>
+                        <p>Je suis dans ta poche. Une question ? Une réponse immédiate.</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🤝</div>
+                    <div class="feature-text">
+                        <strong>Le Cercle des Athlètes</strong>
+                        <p>Accès à la communauté privée de ceux qui visent l'excellence.</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://calendly.com/mosiahahouansou/30min" class="cta-btn-premium">
+                RÉSERVER MON SUIVI INTENSIF
+                <span>Rejoins les 5 athlètes de la semaine →</span>
+            </a>
+
+            <div class="scarcity-warning">
+                ⚠️ <strong>Plus que 5 places disponibles</strong> pour garantir un suivi d'élite.
+            </div>
+        </div>
+    </div>
 </section>
+
+<style>
+    /* Styles spécifiques pour l'offre vendeuse */
+    .premium-offer-card {
+        background: white;
+        border-radius: 40px;
+        padding: 60px 40px;
+        box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        border: 2px solid #eee;
+        position: relative;
+        overflow: hidden;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .offer-badge {
+        background: var(--primary);
+        color: white;
+        padding: 8px 20px;
+        font-weight: 900;
+        font-size: 0.8rem;
+        border-radius: 50px;
+        display: inline-block;
+        letter-spacing: 2px;
+    }
+
+    .offer-subtitle {
+        color: #666;
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
+
+    .pricing-container {
+        margin-bottom: 40px;
+    }
+
+    .old-price {
+        text-decoration: line-through;
+        color: #999;
+        font-size: 1.5rem;
+    }
+
+    .current-price {
+        font-size: 5rem;
+        font-weight: 900;
+        color: var(--dark);
+        line-height: 1;
+    }
+
+    .currency { font-size: 2rem; color: var(--primary); }
+
+    .price-note { color: var(--primary); font-weight: 700; margin-top: 5px; }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        text-align: left;
+        margin-bottom: 50px;
+    }
+
+    .feature-item {
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .feature-icon {
+        font-size: 1.5rem;
+        background: #fff5f2;
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .feature-text strong { display: block; font-size: 1.1rem; margin-bottom: 5px; }
+    .feature-text p { font-size: 0.95rem; color: #555; }
+
+    .cta-btn-premium {
+        background: var(--dark);
+        color: white;
+        padding: 25px 50px;
+        border-radius: 100px;
+        text-decoration: none;
+        display: block;
+        font-weight: 900;
+        font-size: 1.4rem;
+        transition: 0.3s;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    }
+
+    .cta-btn-premium span {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 400;
+        opacity: 0.8;
+        margin-top: 5px;
+    }
+
+    .cta-btn-premium:hover { transform: translateY(-5px); background: #000; }
+
+    .scarcity-warning {
+        margin-top: 30px;
+        color: #d9534f;
+        font-size: 1.1rem;
+    }
+
+    @media (max-width: 768px) {
+        .features-grid { grid-template-columns: 1fr; }
+        .current-price { font-size: 3.5rem; }
+    }
+</style>
 
 </body>
 </html>
