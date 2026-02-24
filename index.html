@@ -24,10 +24,10 @@
         .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
         .logo { color: white; font-weight: 900; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* Hero Section */
+        /* Hero Section - Updated Image (Bodyweight focus) */
         .hero { 
             height: 100vh; 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&q=80&w=1200'); 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1598971639058-aba3c32df8a0?auto=format&fit=crop&q=80&w=1200'); 
             background-size: cover; background-position: center; 
             display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 20px;
         }
@@ -56,9 +56,11 @@
         .pain-point { border-left: 5px solid var(--danger); background: white; }
         .solution-box { background: var(--light); padding: 40px; border-radius: 30px; border: 2px solid var(--primary); margin-top: 40px; }
 
-        /* Social Proof */
-        .proof-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: left; }
-        .whatsapp-badge { background: #25D366; color: white; padding: 4px 8px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; }
+        /* Social Proof - Circular Profile Pics */
+        .proof-card { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: left; }
+        .proof-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+        .profile-pic { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary); }
+        .whatsapp-badge { background: #25D366; color: white; padding: 4px 8px; border-radius: 5px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; }
 
         /* Accordion FAQ */
         .faq-container { max-width: 800px; margin: 50px auto; text-align: left; }
@@ -77,6 +79,7 @@
         .badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 5px 20px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
         .price-card ul { list-style: none; margin: 25px 0; flex-grow: 1; }
         .price-card li { margin-bottom: 12px; display: flex; align-items: center; gap: 10px; font-size: 0.95rem; }
+        .duration-tag { font-size: 0.8rem; font-weight: 700; color: var(--secondary); text-transform: uppercase; letter-spacing: 1px; }
 
         @media (max-width: 768px) { 
             .hero-content h1 { font-size: 2.5rem; }
@@ -126,23 +129,34 @@
             <h2 style="font-size: 2.5rem; margin-bottom: 50px;">Ils ont sauté le pas</h2>
             <div class="grid">
                 <div class="proof-card">
-                    <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&q=80&w=400" style="width:100%">
-                    <div style="padding:20px;">
-                        <p>"Mes jambes sont devenues du béton en 6 semaines. Je vole littéralement au basket désormais."</p>
-                        <div style="margin-top:15px;"><span class="whatsapp-badge">WhatsApp</span> <strong>Marc, 32 ans</strong></div>
+                    <div class="proof-header">
+                        <img src="https://i.pravatar.cc/150?u=marc" class="profile-pic" alt="Marc">
+                        <div>
+                            <strong>Marc, 32 ans</strong><br>
+                            <span class="whatsapp-badge">WhatsApp</span>
+                        </div>
                     </div>
+                    <p>"Mes jambes sont devenues du béton en 6 semaines. Je vole littéralement au basket désormais. C'est le jour et la nuit."</p>
                 </div>
-                <div class="proof-card" style="background: #E7F3F0; padding: 30px; border-left: 5px solid #25D366;">
-                    <p><strong>Reçu à 18:42 :</strong></p>
-                    <p>"Hey Moses ! Merci pour les corrections sur l'amorti, je n'ai plus aucune douleur aux genoux après mes séances de sauts. Je me sens enfin athlétique."</p>
-                    <p style="margin-top:20px; font-weight:700;">— Julien A.</p>
+                <div class="proof-card" style="border-left: 5px solid #25D366;">
+                    <div class="proof-header">
+                        <img src="https://i.pravatar.cc/150?u=julien" class="profile-pic" alt="Julien">
+                        <div>
+                            <strong>Julien A.</strong><br>
+                            <span class="whatsapp-badge">WhatsApp</span>
+                        </div>
+                    </div>
+                    <p>"Merci pour les corrections sur l'amorti, je n'ai plus aucune douleur aux genoux après mes séances de sauts. Je me sens enfin athlétique."</p>
                 </div>
                 <div class="proof-card">
-                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=400" style="width:100%">
-                    <div style="padding:20px;">
-                        <p>"+5kg de muscle sec sans jamais toucher une haltère. Une méthode brutale mais payante."</p>
-                        <div style="margin-top:15px;"><span class="whatsapp-badge">WhatsApp</span> <strong>Sarah, 28 ans</strong></div>
+                    <div class="proof-header">
+                        <img src="https://i.pravatar.cc/150?u=sarah" class="profile-pic" alt="Sarah">
+                        <div>
+                            <strong>Sarah, 28 ans</strong><br>
+                            <span class="whatsapp-badge">WhatsApp</span>
+                        </div>
                     </div>
+                    <p>"+5kg de muscle sec sans jamais toucher une haltère. Une méthode brutale mais payante. Merci Moses !"</p>
                 </div>
             </div>
         </div>
@@ -166,11 +180,12 @@
             <div class="grid" style="align-items: stretch;">
                 
                 <div class="card price-card">
+                    <span class="duration-tag">Programme 8 semaines</span>
                     <h3>Jump & Move</h3>
                     <p style="color: #777; font-size: 0.9rem;">L'essentiel en autonomie</p>
                     <div style="font-size: 2.5rem; font-weight: 900; margin: 20px 0; color: var(--primary);">49 CHF</div>
                     <ul>
-                        <li>✅ Programme PDF 8 semaines</li>
+                        <li>✅ Programme PDF complet</li>
                         <li>✅ Vidéos de démonstration</li>
                         <li>✅ Guide nutritionnel de base</li>
                         <li style="color: #ccc;">❌ Analyse Vidéo</li>
@@ -180,9 +195,10 @@
 
                 <div class="card price-card featured">
                     <div class="badge">LE PLUS POPULAIRE</div>
+                    <span class="duration-tag">Programme 12 semaines</span>
                     <h3>Explosive Body</h3>
                     <p style="color: #777; font-size: 0.9rem;">Le suivi personnalisé</p>
-                    <div style="font-size: 2.5rem; font-weight: 900; margin: 20px 0; color: var(--primary);">97 CHF</div>
+                    <div style="font-size: 2.5rem; font-weight: 900; margin: 20px 0; color: var(--primary);">150 CHF</div>
                     <ul>
                         <li>✅ Programmation Dynamique</li>
                         <li>✅ Analyse Vidéo hebdomadaire</li>
@@ -193,9 +209,10 @@
                 </div>
 
                 <div class="card price-card" style="background: var(--dark); color: white;">
+                    <span class="duration-tag" style="color: var(--accent);">Programme 12 semaines</span>
                     <h3 style="color: var(--secondary);">THUNDERCAT MODE</h3>
                     <p style="color: #aaa; font-size: 0.9rem;">L'expérience Élite VIP</p>
-                    <div style="font-size: 2.5rem; font-weight: 900; margin: 20px 0; color: white;">249 CHF</div>
+                    <div style="font-size: 2.5rem; font-weight: 900; margin: 20px 0; color: white;">375 CHF</div>
                     <ul>
                         <li>✅ Tout de l'Explosive Body</li>
                         <li>✅ Appel Visio 1h mensuel</li>
@@ -247,13 +264,10 @@
     </footer>
 
     <script>
-        // FAQ Toggle Logic
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
                 const item = button.parentElement;
                 item.classList.toggle('active');
-                
-                // Fermer les autres accordéons
                 document.querySelectorAll('.faq-item').forEach(other => {
                     if (other !== item) other.classList.remove('active');
                 });
