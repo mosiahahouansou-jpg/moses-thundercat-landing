@@ -3,84 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moses Thundercat - Elite Coaching</title>
+    <title>Moses Thundercat - Elite Coaching | Poids du corps & Plyométrie</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Vert Émeraude élégant et non flashy */
-            --primary: #2D5A4C; 
+            --primary: #2D5A4C; /* Vert Émeraude */
             --secondary: #3D7A67;
             --dark: #1A1A1A;
             --light: #F4F7F6;
             --accent: #E0E7E5;
+            --white: #ffffff;
+            --danger: #d9534f;
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: var(--dark); scroll-behavior: smooth; background-color: white; }
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: var(--dark); scroll-behavior: smooth; background-color: var(--white); }
         
+        /* Navigation */
         header { position: fixed; top: 0; width: 100%; background: rgba(26, 26, 26, 0.98); padding: 15px 0; z-index: 1000; backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1); }
         .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
         .logo { color: white; font-weight: 900; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 2px; }
-        
+
+        /* Hero Section */
         .hero { 
             height: 100vh; 
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&q=80&w=1200'); 
-            background-size: cover; 
-            background-position: center; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            text-align: center; 
-            color: white; 
-            padding: 0 20px;
+            background-size: cover; background-position: center; 
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 20px;
         }
         .hero-content { max-width: 900px; }
-        .hero-content h1 { font-size: clamp(2.2rem, 7vw, 4rem); font-weight: 900; line-height: 1.1; margin-bottom: 25px; text-transform: uppercase; }
+        .hero-content h1 { font-size: clamp(2.2rem, 7vw, 4rem); font-weight: 900; line-height: 1.1; margin-bottom: 25px; }
         .hero-content p { font-size: clamp(1.1rem, 3vw, 1.4rem); margin-bottom: 40px; font-weight: 300; color: var(--accent); }
-        
+
+        /* Buttons */
         .cta-btn { 
             background: linear-gradient(135deg, var(--primary), var(--secondary)); 
-            color: white; 
-            padding: 22px 45px; 
-            font-size: 1.1rem; 
-            font-weight: 700; 
-            text-decoration: none; 
-            border-radius: 50px; 
-            display: inline-block; 
-            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-            border: none; 
-            cursor: pointer; 
-            text-transform: uppercase;
-            box-shadow: 0 10px 30px rgba(45, 90, 76, 0.3);
+            color: white; padding: 20px 40px; font-size: 1.1rem; font-weight: 700; text-decoration: none; border-radius: 50px; 
+            display: inline-block; transition: 0.4s; border: none; cursor: pointer; text-transform: uppercase;
+            box-shadow: 0 10px 30px rgba(45, 90, 76, 0.3); text-align: center;
         }
         .cta-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(45, 90, 76, 0.5); }
-        
+
+        /* Layout */
         .step-section { padding: 100px 20px; text-align: center; }
         .container { max-width: 1100px; margin: 0 auto; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
         
-        .card { background: var(--light); padding: 45px; border-radius: 24px; text-align: left; transition: 0.3s; border: 1px solid rgba(0,0,0,0.05); }
-        .card:hover { transform: translateY(-10px); border-bottom: 5px solid var(--primary); }
-        .card h3 { margin-bottom: 15px; font-size: 1.5rem; color: var(--primary); }
+        /* Cards */
+        .card { background: var(--light); padding: 40px; border-radius: 25px; text-align: left; transition: 0.3s; height: 100%; }
         
-        .form-wrapper { background: white; padding: 20px; border-radius: 25px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); margin-top: 50px; overflow: hidden; }
-        
-        .offer-box { 
-            background: var(--primary); 
-            color: white; 
-            padding: 80px 40px; 
-            border-radius: 40px; 
-            margin: 60px 0; 
-            box-shadow: 0 25px 50px rgba(45, 90, 76, 0.25); 
-            position: relative;
-            overflow: hidden;
+        /* Pain Points */
+        .pain-point { border-left: 5px solid var(--danger); background: white; }
+        .solution-box { background: var(--light); padding: 40px; border-radius: 30px; border: 2px solid var(--primary); margin-top: 40px; }
+
+        /* Social Proof */
+        .proof-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: left; }
+        .whatsapp-badge { background: #25D366; color: white; padding: 4px 8px; border-radius: 5px; font-size: 0.8rem; font-weight: bold; }
+
+        /* Accordion FAQ */
+        .faq-container { max-width: 800px; margin: 50px auto; text-align: left; }
+        .faq-item { border-bottom: 1px solid var(--accent); }
+        .faq-question { 
+            width: 100%; padding: 20px; background: none; border: none; 
+            display: flex; justify-content: space-between; align-items: center;
+            cursor: pointer; font-size: 1.1rem; font-weight: 700; color: var(--primary); text-align: left;
         }
-        .offer-box h2 { color: white !important; margin-bottom: 20px; }
-        .offer-box ul { list-style: none; margin: 35px auto; max-width: 550px; text-align: left; }
-        .offer-box li { margin-bottom: 18px; font-size: 1.1rem; display: flex; align-items: center; gap: 12px; }
-        
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 20px; color: #555; }
+        .faq-item.active .faq-answer { max-height: 500px; padding-bottom: 20px; }
+
+        /* Pricing Section */
+        .price-card { background: white; border: 1px solid var(--accent); position: relative; display: flex; flex-direction: column; }
+        .price-card.featured { border: 3px solid var(--primary); transform: scale(1.05); z-index: 2; box-shadow: 0 20px 40px rgba(45,90,76,0.2); }
+        .badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 5px 20px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+        .price-card ul { list-style: none; margin: 25px 0; flex-grow: 1; }
+        .price-card li { margin-bottom: 12px; display: flex; align-items: center; gap: 10px; font-size: 0.95rem; }
+
         @media (max-width: 768px) { 
-            .hero-content h1 { font-size: 2.5rem; } 
-            .step-section { padding: 60px 20px; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .price-card.featured { transform: scale(1); margin: 20px 0; }
         }
     </style>
 </head>
@@ -89,7 +89,7 @@
     <header>
         <div class="nav-container">
             <div class="logo">Moses Thundercat</div>
-            <a href="#eval" class="cta-btn" style="padding: 12px 25px; font-size: 0.75rem;">BILAN GRATUIT</a>
+            <a href="#eval" class="cta-btn" style="padding: 10px 20px; font-size: 0.8rem;">BILAN GRATUIT</a>
         </div>
     </header>
 
@@ -103,39 +103,46 @@
 
     <section class="step-section">
         <div class="container">
-            <h2 style="font-size: 2.5rem; margin-bottom: 15px;">Transformez vos limites</h2>
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Vous stagnez ? <span style="color: var(--primary);">Changez de dimension.</span></h2>
             <div class="grid">
-                <div class="card">
-                    <h3>⚡ Explosivité brute</h3>
-                    <p>Développez une puissance de saut et une réactivité hors norme grâce à des protocoles de plyométrie avancés.</p>
+                <div class="card pain-point">
+                    <h3 style="color: var(--danger);">❌ Marre des plateaux ?</h3>
+                    <p>Vous vous entraînez dur, mais votre physique ne bouge plus. Vos records stagnent et votre motivation s'effrite.</p>
                 </div>
-                <div class="card">
-                    <h3>🦾 Maîtrise du corps</h3>
-                    <p>Utilisez votre propre poids pour bâtir un physique dense, sec et fonctionnel. Pas de machines, juste vous.</p>
+                <div class="card pain-point">
+                    <h3 style="color: var(--danger);">❌ Peu de temps ?</h3>
+                    <p>Passer 2h en salle est impossible. Vous avez besoin d'une méthode courte, intense et efficace n'importe où.</p>
                 </div>
-                <div class="card">
-                    <h3>🛡️ Longévité</h3>
-                    <p>Une approche axée sur la santé articulaire pour devenir plus fort chaque jour, sans vous blesser.</p>
-                </div>
+            </div>
+            <div class="solution-box">
+                <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 15px;">L'Approche Thundercat : Force & Air</h3>
+                <p>Je combine la <strong>Liberté du Poids du Corps</strong> et l'<strong>Explosivité de la Plyométrie</strong>. Zéro matériel, 45 min par séance, des résultats radicaux.</p>
             </div>
         </div>
     </section>
 
-    <section class="step-section" id="pourquoi" style="background: var(--dark); color: white;">
+    <section class="step-section" style="background: var(--light);">
         <div class="container">
-            <h2 style="color: var(--secondary); font-size: 2.5rem; margin-bottom: 30px;">L'Expertise Thundercat</h2>
+            <h2 style="font-size: 2.5rem; margin-bottom: 50px;">Ils ont sauté le pas</h2>
             <div class="grid">
-                <div class="card" style="background: rgba(255,255,255,0.03); color: white; border: 1px solid rgba(255,255,255,0.1);">
-                    <h3 style="color: var(--secondary);">Performance</h3>
-                    <p>Chaque répétition a un but. Nous visons l'efficacité maximale pour des résultats visibles.</p>
+                <div class="proof-card">
+                    <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&q=80&w=400" style="width:100%">
+                    <div style="padding:20px;">
+                        <p>"Mes jambes sont devenues du béton en 6 semaines. Je vole littéralement au basket désormais."</p>
+                        <div style="margin-top:15px;"><span class="whatsapp-badge">WhatsApp</span> <strong>Marc, 32 ans</strong></div>
+                    </div>
                 </div>
-                <div class="card" style="background: rgba(255,255,255,0.03); color: white; border: 1px solid rgba(255,255,255,0.1);">
-                    <h3 style="color: var(--secondary);">Personnalisation</h3>
-                    <p>Votre programme s'adapte à votre niveau, votre matériel et vos objectifs réels.</p>
+                <div class="proof-card" style="background: #E7F3F0; padding: 30px; border-left: 5px solid #25D366;">
+                    <p><strong>Reçu à 18:42 :</strong></p>
+                    <p>"Hey Moses ! Merci pour les corrections sur l'amorti, je n'ai plus aucune douleur aux genoux après mes séances de sauts. Je me sens enfin athlétique."</p>
+                    <p style="margin-top:20px; font-weight:700;">— Julien A.</p>
                 </div>
-                <div class="card" style="background: rgba(255,255,255,0.03); color: white; border: 1px solid rgba(255,255,255,0.1);">
-                    <h3 style="color: var(--secondary);">Soutien 24/7</h3>
-                    <p>Un accès direct à votre coach pour ajuster votre technique et garder une motivation d'acier.</p>
+                <div class="proof-card">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=400" style="width:100%">
+                    <div style="padding:20px;">
+                        <p>"+5kg de muscle sec sans jamais toucher une haltère. Une méthode brutale mais payante."</p>
+                        <div style="margin-top:15px;"><span class="whatsapp-badge">WhatsApp</span> <strong>Sarah, 28 ans</strong></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -143,15 +150,115 @@
 
     <section class="step-section" id="eval">
         <div class="container">
-            <h2 style="font-size: 2.5rem; color: var(--dark);">🔍 Étape 1 : Votre Bilan Offert</h2>
-            <p style="margin-bottom: 20px;">Répondez à ces 15 questions pour que je puisse analyser votre profil.</p>
-            <div class="form-wrapper">
+            <h2 style="font-size: 2.5rem;">🔍 Étape 1 : Votre Bilan Offert</h2>
+            <p style="margin-bottom: 30px;">Répondez à ces questions pour recevoir votre analyse personnalisée.</p>
+            <div style="background: white; padding: 10px; border-radius: 25px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); overflow: hidden;">
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScXViLuyhrHyF50-1W_3VEQCfcExyTZhXcu9e2-j3IROx71sw/viewform?embedded=true" width="100%" height="700" frameborder="0">Chargement...</iframe>
             </div>
         </div>
     </section>
 
-    <section class="step-section" id="consultation">
+    <section class="step-section" id="offres">
         <div class="container">
-            <div class="offer-box">
-                <h2 style="font-size: 2.8rem; margin-bottom:
+            <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Découvrez nos formules</h2>
+            <p style="margin-bottom: 60px;">Une solution pour chaque budget et chaque objectif.</p>
+
+            <div class="grid" style="align-items: stretch;">
+                
+                <div class="card price-card">
+                    <h3>Jump & Move</h3>
+                    <p style="color: #777; font-size: 0.9rem;">L'essentiel en autonomie</p>
+                    <div style="font-size: 2.5rem; font-weight: 900; margin: 20px 0; color: var(--primary);">49 CHF</div>
+                    <ul>
+                        <li>✅ Programme PDF 8 semaines</li>
+                        <li>✅ Vidéos de démonstration</li>
+                        <li>✅ Guide nutritionnel de base</li>
+                        <li style="color: #ccc;">❌ Analyse Vidéo</li>
+                    </ul>
+                    <a href="#eval" class="cta-btn" style="width:100%; padding: 15px;">Choisir Solo</a>
+                </div>
+
+                <div class="card price-card featured">
+                    <div class="badge">LE PLUS POPULAIRE</div>
+                    <h3>Explosive Body</h3>
+                    <p style="color: #777; font-size: 0.9rem;">Le suivi personnalisé</p>
+                    <div style="font-size: 2.5rem; font-weight: 900; margin: 20px 0; color: var(--primary);">97 CHF</div>
+                    <ul>
+                        <li>✅ Programmation Dynamique</li>
+                        <li>✅ Analyse Vidéo hebdomadaire</li>
+                        <li>✅ Support WhatsApp 7j/7</li>
+                        <li>✅ Ajustements en temps réel</li>
+                    </ul>
+                    <a href="#eval" class="cta-btn" style="width:100%; padding: 15px;">Démarrer maintenant</a>
+                </div>
+
+                <div class="card price-card" style="background: var(--dark); color: white;">
+                    <h3 style="color: var(--secondary);">THUNDERCAT MODE</h3>
+                    <p style="color: #aaa; font-size: 0.9rem;">L'expérience Élite VIP</p>
+                    <div style="font-size: 2.5rem; font-weight: 900; margin: 20px 0; color: white;">249 CHF</div>
+                    <ul>
+                        <li>✅ Tout de l'Explosive Body</li>
+                        <li>✅ Appel Visio 1h mensuel</li>
+                        <li>✅ Plan alimentaire sur-mesure</li>
+                        <li>✅ Analyse biomécanique</li>
+                    </ul>
+                    <a href="https://calendly.com/mosiahahouansou/30min" class="cta-btn" style="background: white; color: var(--dark); width:100%; padding: 15px;">Appliquer au VIP</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="step-section" style="background: var(--light);">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 40px;">Des questions ?</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">Est-ce trop dur pour mes genoux ?</button>
+                    <div class="faq-answer">
+                        <p>C'est l'inverse. On vous apprend à amortir avant de vous apprendre à sauter. On renforce vos tendons pour que vos articulations soient enfin protégées par des muscles fonctionnels.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Faut-il du matériel ?</button>
+                    <div class="faq-answer">
+                        <p>Zéro. C'est la magie du poids du corps. Votre environnement est votre salle de sport. Un sol et un mur suffisent pour transformer votre corps.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Combien de temps durent les séances ?</button>
+                    <div class="faq-answer">
+                        <p>Comptez 45 minutes par séance. C'est le format idéal pour rester intense sans sacrifier votre vie sociale ou professionnelle.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Je n'ai pas de base en sport, est-ce pour moi ?</button>
+                    <div class="faq-answer">
+                        <p>Oui, car tout est progressif. On ne commence pas par des sauts périlleux. On commence par stabiliser votre squat et gainer votre sangle abdominale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: #0A0A0A; color: #777; padding: 60px 20px; text-align: center;">
+        <p style="color: white; font-weight: 900; letter-spacing: 2px; margin-bottom: 20px;">MOSES THUNDERCAT</p>
+        <p>&copy; 2026. Tous droits réservés. Forgez votre légende.</p>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('active');
+                
+                // Fermer les autres accordéons
+                document.querySelectorAll('.faq-item').forEach(other => {
+                    if (other !== item) other.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
